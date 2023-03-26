@@ -1,0 +1,13 @@
+---
+- name: Crear recursos Azure
+  hosts: localhost
+  connection: local
+  gather_facts: no
+
+  tasks:
+    - name: Crear grupo de recursos
+      azure_rm_resourcegroup:
+        name: myResourceGroup445
+        location: eastus
+
+ 
