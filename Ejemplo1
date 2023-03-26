@@ -1,0 +1,11 @@
+---
+- name: Ejemplo 1 - linux
+  hosts: linux_ubuntu_azure
+  gather_facts: no
+  
+  tasks:
+  - name: Navegar al directorio
+    shell: cd Practicas_Linux/Ejemplos_bash_scripts/
+    
+  - name: Imprimir la ruta actual
+    command: pwd
