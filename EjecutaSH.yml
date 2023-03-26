@@ -1,0 +1,13 @@
+---
+- name: Ejecutar un script shell en el servidor
+  hosts: all   # Reemplaza 'servidor1' con el nombre o dirección IP de tu servidor
+  become: yes        # Se ejecutará con permisos de superusuario
+  tasks:
+    - name: Copiar script shell al servidor
+      copy:
+        src: /home/admin123/Practicas_Linux/Ejemplos_bash_scripts/ejemplo1.sh   # Reemplaza '/ruta/al/script.sh' con la ruta de tu script
+        dest: /tmp/script.sh     # Ruta en el servidor donde se copiará el script
+        mode: '0755'             # Asigna permisos al script
+
+    - name: Ejecutar el script
+      shell: /tmp/script.sh      # Ejecuta el script desde la ruta en el servidor donde se copió
