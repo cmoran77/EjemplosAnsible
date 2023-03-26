@@ -1,6 +1,6 @@
 ---
 - name: Ejecutar un script shell en el servidor
-  hosts: all   # Reemplaza 'servidor1' con el nombre o dirección IP de tu servidor
+  hosts: linux_ubuntu_azure   # Reemplaza 'servidor1' con el nombre o dirección IP de tu servidor
   become: yes        # Se ejecutará con permisos de superusuario
   tasks:
     - name: Copiar script shell al servidor
